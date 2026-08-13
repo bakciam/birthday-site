@@ -1,0 +1,41 @@
+:root {
+  --ink: #f8f4e9;
+  --muted: #aeb5ca;
+  --gold: #f5bd67;
+  --coral: #ec806d;
+  --night: #101832;
+  --serif: "Noto Serif SC", serif;
+  --sans: "Space Grotesk", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--ink); background: var(--night);
+  font-family: var(--sans); overflow-x: hidden;
+}
+.sky { position: fixed; inset: 0; pointer-events: none; overflow: hidden; background: radial-gradient(circle at 74% 18%, #27345d 0, transparent 28%), radial-gradient(circle at 25% 78%, #182746 0, transparent 35%), #101832; }
+.sky::after { content: ""; position: absolute; width: 48vw; height: 48vw; right: -18vw; top: -20vw; border: 1px solid #ffffff18; border-radius: 50%; box-shadow: 0 0 0 7vw #ffffff05, 0 0 0 14vw #ffffff03; }
+.star { position: absolute; width: 3px; height: 3px; background: #fff4c5; border-radius: 50%; box-shadow: 0 0 9px 2px #fff0ac; animation: twinkle 3s infinite alternate; }
+.star-1 { left: 12%; top: 19%; } .star-2 { left: 84%; top: 27%; animation-delay: 1s; }
+.star-3 { left: 69%; top: 74%; animation-delay: .5s; } .star-4 { left: 31%; top: 58%; }
+.star-5 { left: 91%; top: 82%; animation-delay: 1.4s; } .star-6 { left: 5%; top: 83%; animation-delay: .8s; }
+.page-shell { position: relative; width: min(1120px, calc(100% - 48px)); margin: auto; }
+.topbar, .footer { display: flex; align-items: center; justify-content: space-between; color: var(--muted); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.topbar { padding: 30px 0; border-bottom: 1px solid #ffffff18; } .brand { color: var(--gold); font-weight: 600; }
+.hero { min-height: 650px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 50px; padding: 60px 5% 90px; }
+.eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 24px; color: var(--gold); font-size: 11px; letter-spacing: .2em; font-weight: 600; text-transform: uppercase; }
+.eyebrow span { width: 30px; height: 1px; background: var(--gold); display: inline-block; }
+h1, h2 { font-family: var(--serif); } h1 { margin: 0; font-size: clamp(48px, 6vw, 80px); line-height: 1.15; letter-spacing: -.07em; font-weight: 900; } h1 em { color: var(--gold); font-style: normal; }
+.intro { max-width: 415px; color: var(--muted); line-height: 1.9; margin: 28px 0 36px; font-size: 15px; }
+.primary-button { display: inline-flex; gap: 34px; align-items: center; border: 1px solid var(--gold); border-radius: 100px; background: var(--gold); color: #19213b; padding: 15px 17px 15px 23px; cursor: pointer; font: 600 13px var(--sans); transition: transform .2s, box-shadow .2s; }
+.primary-button b { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: #19213b; color: var(--gold); font-size: 17px; } .primary-button:hover { transform: translateY(-3px); box-shadow: 0 12px 30px #f5bd6738; }
+.cake-scene { position: relative; display: grid; place-items: center; height: 390px; } .cake-scene p { position: absolute; bottom: 15px; color: #f5bd67aa; font: italic 14px var(--serif); letter-spacing: .13em; }
+.halo { position: absolute; width: 310px; height: 310px; border-radius: 50%; background: #f5bd6710; box-shadow: 0 0 80px #f5bd6718; } .flame { position: absolute; top: 62px; width: 20px; height: 35px; border-radius: 70% 30% 70% 30%; transform: rotate(45deg); background: #fff0a1; box-shadow: 0 0 25px 9px #f5bd6777; animation: flicker .8s infinite alternate; } .flame i { display: block; width: 7px; height: 13px; margin: 14px 0 0 5px; background: var(--coral); border-radius: 50%; }
+.candle { position: absolute; top: 97px; width: 10px; height: 62px; border-radius: 5px; background: repeating-linear-gradient(135deg, #fff4d2 0 6px, var(--coral) 6px 10px); }
+.cake-top { position: absolute; top: 150px; width: 215px; height: 52px; border-radius: 50%; background: #f9d49a; box-shadow: inset 0 -14px #e99476; } .cake-body { position: absolute; top: 175px; width: 200px; height: 110px; border-radius: 8px 8px 35px 35px; background: #da735f; box-shadow: inset 0 -25px #ba5b5e; } .cake-body::before { content: ""; position: absolute; inset: -4px 5px auto; height: 25px; border-radius: 50%; background: #fff0d0; } .cake-body span { position: absolute; top: 38px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); } .cake-body span:nth-child(1) { left: 33px; } .cake-body span:nth-child(2) { left: 95px; } .cake-body span:nth-child(3) { right: 30px; } .plate { position: absolute; top: 273px; width: 275px; height: 22px; border-radius: 50%; background: #f6e3c1; box-shadow: 0 7px 0 #c4a582; }
+.letter { display: none; position: relative; max-width: 730px; margin: 0 auto 90px; padding: 55px clamp(28px, 8vw, 100px) 65px; color: #28304a; background: #fff8e9; box-shadow: 18px 22px 0 #f5bd6714; transform: translateY(20px); opacity: 0; } .letter.is-open { display: block; animation: reveal .7s forwards; } .letter::before { content: ""; position: absolute; inset: 13px; border: 1px solid #dcae7380; pointer-events: none; } .letter-mark { position: absolute; right: 46px; top: 32px; color: var(--coral); font-size: 20px; } .letter .eyebrow { color: var(--coral); } .letter .eyebrow span { background: var(--coral); } h2 { font-size: clamp(28px, 4vw, 42px); margin: 0 0 28px; font-weight: 600; } h2 strong { color: var(--coral); } .letter-body { color: #5d6275; font-family: var(--serif); line-height: 2; font-size: 16px; } .signature { margin: 35px 0 0; color: #7e7181; font: 13px/1.8 var(--serif); text-align: right; } .signature span { color: var(--coral); font-size: 18px; }
+.footer { padding: 22px 0 35px; border-top: 1px solid #ffffff18; } .footer-dot { color: var(--coral); font-size: 8px; } .footer b { color: var(--gold); font-weight: 500; }
+.confetti { position: fixed; inset: 0; pointer-events: none; z-index: 5; } .piece { position: absolute; top: -20px; width: 8px; height: 14px; animation: fall 1.7s ease-in forwards; }
+@keyframes twinkle { to { opacity: .25; transform: scale(.55); } } @keyframes flicker { to { transform: rotate(50deg) scale(.88); } } @keyframes reveal { to { opacity: 1; transform: translateY(0); } } @keyframes fall { to { transform: translate3d(var(--drift), 110vh, 0) rotate(700deg); } }
+@media (max-width: 700px) { .page-shell { width: min(100% - 32px, 520px); } .topbar { padding: 22px 0; } .date-label { max-width: 150px; text-align: right; line-height: 1.4; } .hero { display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 58px 5% 45px; min-height: auto; } h1 { font-size: clamp(43px, 13vw, 65px); } .intro { font-size: 14px; } .cake-scene { height: 325px; transform: scale(.86); margin: -10px 0 -15px; } .letter { margin-bottom: 60px; padding: 48px 26px 50px; } .letter::before { inset: 9px; } .footer { font-size: 9px; } }

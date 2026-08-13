@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101832" />
+    <meta name="description" content="一封写给特别的你的生日祝福" />
+    <title>给特别的你 · 生日快乐</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true">
+      <span class="star star-1"></span><span class="star star-2"></span>
+      <span class="star star-3"></span><span class="star star-4"></span>
+      <span class="star star-5"></span><span class="star star-6"></span>
+    </div>
+    <main class="page-shell">
+      <header class="topbar">
+        <span class="brand">A LITTLE NOTE</span>
+        <span class="date-label" id="birthdayDate">今天值得被认真庆祝</span>
+      </header>
+
+      <section class="hero" aria-labelledby="pageTitle">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> 写给特别的你</p>
+          <h1 id="pageTitle">今天，<em>星星</em><br />都在为你发光。</h1>
+          <p class="intro">愿新一岁的你，依然拥有发现小确幸的眼睛，也拥有奔向热爱的勇气。</p>
+          <button class="primary-button" id="openLetter" type="button">
+            <span>打开这封信</span><b>↗</b>
+          </button>
+        </div>
+        <div class="cake-scene" aria-label="一只点着蜡烛的生日蛋糕">
+          <div class="halo"></div>
+          <div class="flame"><i></i></div>
+          <div class="candle"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"><span></span><span></span><span></span></div>
+          <div class="plate"></div>
+          <p>make a wish</p>
+        </div>
+      </section>
+
+      <section class="letter" id="letter" aria-labelledby="letterTitle">
+        <div class="letter-mark">✦</div>
+        <p class="eyebrow">DEAR <span></span></p>
+        <h2 id="letterTitle">亲爱的 <strong id="recipient">你</strong>：</h2>
+        <div class="letter-body" id="message">
+          <p>生日快乐！新的一岁，愿你走过的每一步都有意义，遇见的每一个人都带着温柔。</p>
+          <p>生活不必时时刻刻都闪闪发光，但你永远值得被爱、被记挂，也值得拥有一场只属于你的盛大庆祝。</p>
+          <p>把今天的快乐收好，带着它去迎接接下来所有值得期待的日子吧。</p>
+        </div>
+        <p class="signature">永远祝福你的<br /><span id="sender">朋友</span></p>
+      </section>
+
+      <footer class="footer">
+        <span>made with warm wishes</span>
+        <span class="footer-dot">●</span>
+        <span>for <b id="footerRecipient">you</b></span>
+      </footer>
+    </main>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

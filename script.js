@@ -1,7 +1,7 @@
 // Edit these four values to personalize the letter.
 const birthday = {
-  recipient: "你",
-  sender: "朋友",
+  recipient: "塟塟",
+  sender: "一直支持你的人",
   date: "今天值得被认真庆祝",
 };
 
